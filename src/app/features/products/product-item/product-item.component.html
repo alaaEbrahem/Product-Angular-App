@@ -1,0 +1,25 @@
+<div class="item-medium-1">
+  <div  *ngIf="product.discount!=null; else h" class="item-medium-1__alert" >Sale</div>
+  <ng-template #h class="item-medium-1__alert" >hii</ng-template>
+  <div class="item-medium-1__image image" [style.backgroundImage]="'url('+product.images[0]+')'" >
+      <a href="#" class="item-medium-1__action">Add to Cart</a>
+  </div>
+  <!-- <div (click)="MyFunc()" [innerText]="'aalllaa'">aaaaa</div> -->
+  <a href="#">
+      <h4 #productName (click)="alaaFunc(productName)">{{product.data[0].name}}</h4>
+      <div class="flex-row">
+          <div>
+              <del>${{getPrice()}}</del>
+              <span class="lable">${{getPrice()}}</span>
+          </div>
+      </div>
+  </a>
+
+  <div class="crud-actions">
+      <a href="#"><i class="far fa-eye"></i></a>
+      <a href="#"><i class="fas fa-edit"></i></a>
+      <a href="#"><i class="fas fa-trash-alt"></i></a>
+  </div>
+  
+<btn [text]="'alaa'" (onClick)="login()"></btn>
+</div>
